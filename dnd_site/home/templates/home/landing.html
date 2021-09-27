@@ -3,19 +3,24 @@
   <head>
     <title>
       {% block title %}
-      Hendrix D&D Club - home
+      Hendrix D&D Club - Home
       {% endblock %}
     </title>
     {% block resources %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin&display=swap" rel="stylesheet">
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'home/assets/hendrixdnd.ico' %}">
     {% endblock %}
   </head>
 
   <body>
     {% block navbar %}
         <div class="row">
-        <div id = "page-head" class="jumbotron" style="background-color: transparent"></div>
           <nav class="navbar navbar-default">
             <div class = "navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
@@ -53,12 +58,25 @@
           <h1 class="text-center"> RollDRIX </h1>
         </div>
       </div>
-      <div id="rectangle"></div>
-      <div style="background-color: #171717;" class="row border">
-        <div class="col-sm-6">
-              <p style="color: white;" class="text-center large"><strong>The Hendrix Dungeons and Dragons Club provides resources to make playing TTRPGs easier financially, creatively, and mechanically.</strong></p>
+      <div id = "picture-montage" class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <div class = "row">
+            <h1 class="text-center"> Add proficiency in RPGs to your character sheet!
+          </div>
         </div>
       </div>
-      <div id="rectangle"></div>
+      <div class="row">
+        <div style="background-color: #171717;" class="row border">
+          <div id="border-lines"></div>
+          <div class="col-sm-6">
+                <p style="color: white;" class="text-center large"><strong>The Hendrix Dungeons and Dragons Club is dedicated to providing resources to make playing TTRPGs easier financially, creatively, and mechanically for the members of the Hendrix Community.</strong></p>
+          </div>
+          <div class="col-sm-6">
+          </div>
+        <div id="border-lines"></div>
+        </div>
+      </div>
     {% endblock %}
   </body>
+
+</html>
