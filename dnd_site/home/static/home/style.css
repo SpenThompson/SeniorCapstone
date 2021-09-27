@@ -10,12 +10,20 @@ h1{
   font-size: 400%;
 }
 
+p{
+  font-family: 'Cabin', sans-serif;
+  font-size: 200%;
+  text-align: center;
+  vertical-align: baseline;
+}
+
 /* IDs */
 #picture-montage{
   height: 60%;
   background-image: url("assets/placeholder.png");
   background-size: cover;
 }
+
 
 #border-lines{
   width: 70%;
@@ -35,14 +43,24 @@ h1{
   background-size:100% 100%;
   background-position: center center;
   text-align: center;
-  width: 100%;
 }
 
 .jumbotron.jumbotron-fluid{
-  width: 100%;
   float: left;
-  width: 100%;
 }
+
+.img-fluid{
+  background-position: center center;
+  text-align: center center;
+}
+
+.row-border{
+  height: 40%;
+  width: 100%;
+  background-position: center center;
+  text-align: center center;
+}
+
 
 /* Navbar, End of CSS After */
 .navbar-toggle {
