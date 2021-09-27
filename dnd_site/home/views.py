@@ -6,4 +6,16 @@ from django.template.loader import get_template
 
 def landing(request):
     return render(request, "home/landing.html")
+
+def members(request):
+    return render(request, "home/members.html")
+
+def information(request):
+    return render(request, "home/information.html")
+
+def services(request):
+    return render(request, "home/services.html")
+
+def contact(request):
+    return render(request, "home/contact.html")
 # Create your views here.
