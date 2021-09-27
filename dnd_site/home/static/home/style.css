@@ -11,12 +11,9 @@ h1{
 }
 
 /* IDs */
-#pictures-montage{
-  height: 40%;
+#picture-montage{
+  height: 60%;
   background-image: url("assets/placeholder.png");
-  background-attachment: fixed;
-  padding-top: 60%;
-  padding-bottom: 60%;
   background-size: cover;
 }
 
@@ -42,7 +39,9 @@ h1{
 }
 
 .jumbotron.jumbotron-fluid{
+  width: 100%;
   float: left;
+  width: 100%;
 }
 
 /* Navbar, End of CSS After */
