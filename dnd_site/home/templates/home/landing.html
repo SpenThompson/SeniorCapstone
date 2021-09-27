@@ -6,9 +6,59 @@
       Hendrix D&D Club - home
       {% endblock %}
     </title>
+    {% block resources %}
     <link href="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
-
+    {% endblock %}
   </head>
 
   <body>
+    {% block navbar %}
+        <div class="row">
+        <div id = "page-head" class="jumbotron" style="background-color: transparent"></div>
+          <nav class="navbar navbar-default">
+            <div class = "navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-items" aria-expanded="false">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+          <div class="collapse navbar-collapse" id="nav-items">
+              <ul class="nav navbar-nav nav-fill">
+                <li><a href="/"> Home </a></li>
+                <li class="dropdown">
+                   <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Members <span class="caret"></span></a>
+                   <ul class="dropdown-menu">
+                     <li><a href="/">Find a Game</a></li>
+                     <li><a href="/">Find Players</a></li>
+                     <li><a href="/">Upcoming Events</a></li>
+                   </ul>
+                 </li>
+                <li><a href="/"> Information </a></li>
+                <li><a href="/"> Services </a></li>
+                <li><a href="/"> Homebrew </a></li>
+                <li><a href="/"> About Us </a></li>
+                <li><a href="/"> Contact Us </a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      {% endblock %}
+
+      {% block content %}
+      <div class="row">
+        <div class="motto">
+          <h1 class="text-center"> RollDRIX </h1>
+        </div>
+      </div>
+      <div id="rectangle"></div>
+      <div style="background-color: #171717;" class="row border">
+        <div class="col-sm-6">
+              <p style="color: white;" class="text-center large"><strong>The Hendrix Dungeons and Dragons Club provides resources to make playing TTRPGs easier financially, creatively, and mechanically.</strong></p>
+        </div>
+      </div>
+      <div id="rectangle"></div>
+    {% endblock %}
+  </body>
