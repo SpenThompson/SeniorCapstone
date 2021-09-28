@@ -12,7 +12,7 @@ h1{
 
 p{
   font-family: 'Cabin', sans-serif;
-  font-size: 200%;
+  font-size: 100%;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 30px;
@@ -26,6 +26,7 @@ p{
   height: 60%;
   background-image: url("assets/placeholder.png");
   background-size: cover;
+  width: 100%;
 }
 
 
@@ -58,7 +59,7 @@ p{
 }
 
 .row-border{
-  height: 40%;
+  height: 60%;
   width: 100%;
   background-position: center center;
   text-align: center center;
