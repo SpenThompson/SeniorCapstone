@@ -1,19 +1,23 @@
+import { FaBars } from 'react-icons/fa';
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
   
 export const Nav = styled.nav`
   background: #E96B10;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
   height: 85px;
   display: flex;
   justify-content: space-between;
   padding: 0.2rem calc((100vw - 1000px) / 2);
   z-index: 12;
-  /* Third Nav */
-  /* justify-content: flex-start; */
 `;
   
 export const NavLink = styled(Link)`
-  color: #808080;
+  color: #6b6b6b;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -24,6 +28,31 @@ export const NavLink = styled(Link)`
     color: #000000;
   }
 `;
+
+export const NavBrandLink = styled(Link)`
+  color: #000000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  curosr: pointer;
+`;
+
+export const Bars = styled(FaBars)`
+  display: none;
+  color: #6b6b6b;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
+
   
 export const NavMenu = styled.div`
   display: flex;
@@ -53,7 +82,7 @@ export const NavBtn = styled.nav`
   
 export const NavBtnLink = styled(Link)`
   border-radius: 4px;
-  background: #808080;
+  background: #6b6b6b;
   padding: 10px 22px;
   color: #000000;
   outline: none;
@@ -66,6 +95,6 @@ export const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #808080;
+    color: #6b6b6b;
   }
 `;

@@ -2,19 +2,20 @@ import React from "react";
 import {
   Nav,
   NavLink,
+  NavBrandLink,
+  Bars,
   NavMenu
 } from './NavbarElements';
 
 function Navigation(props) {
   return (
-    <div className="navbar=">
-      <nav class="navbar navbar-expand">
-        <div class="container">
-          <Nav>
+    <nav class="navbar" expand="lg">
+      <Nav>
+        <Bars />   
         <NavMenu>
-          <NavLink class="navbar-brand" to="/">
+          <NavBrandLink class="navbar-brand" to="/" style={{ textDecoration: "none", color: "#000000"}}>
             Hendrix D&D Club
-          </NavLink>
+          </NavBrandLink>
           <NavLink to='/' activeStyle>
             Home
           </NavLink>
@@ -32,14 +33,7 @@ function Navigation(props) {
           </NavLink>
         </NavMenu>
       </Nav>
-          <div>
-            <ul class="navbar-nav ml-auto">
-              
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </div>
+    </nav>
   );
 }
 
