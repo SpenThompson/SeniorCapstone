@@ -1,45 +1,42 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import {
+  Nav,
+  NavLink,
+  NavMenu,
+  NavBtn,
+  NavBtnLink,
+} from './NavbarElements';
 
 function Navbar(props) {
   return (
     <div className="navigation=">
       <nav class="navbar navbar-expand navbar-dark bg-dark">
         <div class="container">
-          <Link class="navbar-brand" to="/">
-            React Multi-Page Website
-          </Link>
-
+          <Nav>
+        <NavMenu>
+          <NavLink class="navbar-brand" to="/">
+            Hendrix D&D Club
+          </NavLink>
+          <NavLink to='/' activeStyle>
+            Home
+          </NavLink>
+          <NavLink to='/members' activeStyle>
+            Members
+          </NavLink>
+          <NavLink to='/information' activeStyle>
+            Information
+          </NavLink>
+          <NavLink to='/services' activeStyle>
+            Services
+          </NavLink>
+          <NavLink to='/contact' activeStyle>
+            Contact Us
+          </NavLink>
+        </NavMenu>
+      </Nav>
           <div>
             <ul class="navbar-nav ml-auto">
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/">
-                  Home
-                  <span class="sr-only">(current)</span>
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/about" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/about">
-                  About
-                </Link>
-              </li>
-              <li
-                class={`nav-item  ${
-                  props.location.pathname === "/contact" ? "active" : ""
-                }`}
-              >
-                <Link class="nav-link" to="/contact">
-                  Contact
-                </Link>
-              </li>
+              
             </ul>
           </div>
         </div>
@@ -48,4 +45,4 @@ function Navbar(props) {
   );
 }
 
-export default withRouter(Navbar);
+export default Navbar;
