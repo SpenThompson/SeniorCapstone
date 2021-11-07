@@ -1,6 +1,6 @@
 import React from "react";
 
-function Members() {
+function Members(){
   return (
     <div className="contact">
       <div class="container">

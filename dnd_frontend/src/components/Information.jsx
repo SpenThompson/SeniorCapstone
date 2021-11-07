@@ -1,6 +1,6 @@
 import React from "react";
 
-function Information() {
+function Information(){
   return (
     <div className="about">
       <div class="container">

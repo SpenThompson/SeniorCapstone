@@ -2,15 +2,13 @@ import React from "react";
 import {
   Nav,
   NavLink,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
+  NavMenu
 } from './NavbarElements';
 
-function Navbar(props) {
+function Navigation(props) {
   return (
-    <div className="navigation=">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <div className="navbar=">
+      <nav class="navbar navbar-expand">
         <div class="container">
           <Nav>
         <NavMenu>
@@ -45,4 +43,4 @@ function Navbar(props) {
   );
 }
 
-export default Navbar;
+export default Navigation;
