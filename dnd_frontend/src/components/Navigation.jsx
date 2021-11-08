@@ -1,4 +1,5 @@
 import React from "react";
+import { Link }from "react-router-dom";
 import {
   Nav,
   NavLink,
@@ -11,24 +12,24 @@ function Navigation(props) {
   return (
     <nav class="navbar" expand="lg">
       <Nav>
+        <Link class="navbar-brand" to="/" style={{ textDecoration: "none", color: "#000000"}}>
+            Hendrix D&D Club
+        </Link>
         <Bars />   
         <NavMenu>
-          <NavBrandLink class="navbar-brand" to="/" style={{ textDecoration: "none", color: "#000000"}}>
-            Hendrix D&D Club
-          </NavBrandLink>
-          <NavLink to='/' activeStyle>
+          <NavLink to='/' activestyle>
             Home
           </NavLink>
-          <NavLink to='/members' activeStyle>
+          <NavLink to='/members' activestyle>
             Members
           </NavLink>
-          <NavLink to='/information' activeStyle>
+          <NavLink to='/information' activestyle>
             Information
           </NavLink>
-          <NavLink to='/services' activeStyle>
+          <NavLink to='/services' activestyle>
             Services
           </NavLink>
-          <NavLink to='/contact' activeStyle>
+          <NavLink to='/contact' activestyle>
             Contact Us
           </NavLink>
         </NavMenu>

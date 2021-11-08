@@ -36,6 +36,7 @@ export const NavBrandLink = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-size: 100%;
   curosr: pointer;
 `;
 

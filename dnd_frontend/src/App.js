@@ -9,10 +9,10 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" exact component={Home} />
-          <Route path="/members" component={Members} />
-          <Route path="/information" component={Information} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact" component={Contact} />
+          <Route path="/members" exact component={Members} />
+          <Route path="/information" exact component={Information} />
+          <Route path="/services" exact component={Services} />
+          <Route path="/contact" exact component={Contact} />
         </Routes>
         <Footer />
       </Router>
