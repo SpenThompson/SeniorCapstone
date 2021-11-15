@@ -16,8 +16,9 @@ export const Nav = styled.nav`
 `;
   
 export const NavLink = styled(Link)`
-  color: #6b6b6b;
+  color: #bdbdbd;
   display: flex;
+  font-size: 18px;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
@@ -30,6 +31,7 @@ export const NavLink = styled(Link)`
 
 export const NavBrandLink = styled(Link)`
   color: #FFFFFF;
+  font-size: 30px;
   display: flex;
   align-items: center;
   text-decoration: none;
