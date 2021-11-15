@@ -1,5 +1,5 @@
 import React from "react";
-import { Link }from "react-router-dom";
+import { useLocation, Link }from "react-router-dom";
 import {
   Nav,
   NavLink,
@@ -17,19 +17,19 @@ function Navigation(props) {
         </Link>
         <Bars />   
         <NavMenu>
-          <NavLink to='/' activestyle>
+          <NavLink to='/'>
             Home
           </NavLink>
-          <NavLink to='/members' activestyle>
+          <NavLink to='/members'>
             Members
           </NavLink>
-          <NavLink to='/information' activestyle>
+          <NavLink to='/information'>
             Information
           </NavLink>
-          <NavLink to='/services' activestyle>
+          <NavLink to='/services'>
             Services
           </NavLink>
-          <NavLink to='/contact' activestyle>
+          <NavLink to='/contact'>
             Contact Us
           </NavLink>
         </NavMenu>

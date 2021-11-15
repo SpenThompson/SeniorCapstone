@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navigation, Footer, Home, Members, Information, Services, Contact } from "./components";
+import { Navigation, Footer, Home, Members, Information, Services, Contact} from "./components";
 
 function App() {
   return (
@@ -8,11 +8,12 @@ function App() {
       <Router>
         <Navigation />
         <Routes>
-          <Route path="/" exact component={Home} />
-          <Route path="/members" exact component={Members} />
-          <Route path="/information" exact component={Information} />
-          <Route path="/services" exact component={Services} />
-          <Route path="/contact" exact component={Contact} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/home" element={<Home />} />
+          <Route exact path="/members" element={<Members />} />
+          <Route exact path="/information"element={<Information />} />
+          <Route exact path="/services" element={<Services />} />
+          <Route exact path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </Router>
