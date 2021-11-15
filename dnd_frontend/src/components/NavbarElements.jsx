@@ -24,12 +24,12 @@ export const NavLink = styled(Link)`
   height: 100%;
   cursor: pointer;
   &.active {
-    color: #000000;
+    color: #FFFFFF;
   }
 `;
 
 export const NavBrandLink = styled(Link)`
-  color: #000000;
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   text-decoration: none;

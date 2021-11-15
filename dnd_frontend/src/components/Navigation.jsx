@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, Link }from "react-router-dom";
+import { Link }from "react-router-dom";
 import {
   Nav,
   NavLink,
@@ -12,9 +12,9 @@ function Navigation(props) {
   return (
     <nav class="navbar" expand="lg">
       <Nav>
-        <Link class="navbar-brand" to="/" style={{ textDecoration: "none", color: "#000000"}}>
+        <NavBrandLink class="navbar-brand" to="/">
             Hendrix D&D Club
-        </Link>
+        </NavBrandLink>
         <Bars />   
         <NavMenu>
           <NavLink to='/'>
