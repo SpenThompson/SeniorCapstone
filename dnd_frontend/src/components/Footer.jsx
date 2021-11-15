@@ -1,49 +1,49 @@
 import React from "react";
 import { 
-   footerBox,
-   footerHeading,
-   footerText,
-   footerContainer,
-   footerColumn,
-   footerRow,
-   footerLink } from './FooterElements';
+   FooterBox,
+   FooterHeading,
+   FooterText,
+   FooterContainer,
+   FooterColumn,
+   FooterRow,
+   FooterLink } from './FooterElements';
 
 function Footer(props) {
     return (
-        <footerBox>
-          <footerContainer>
-            <footerRow>
+        <FooterBox>
+          <FooterContainer>
+            <FooterRow>
               <div class="container">
                 <div class="col-md-6">
-                  <footerHeading>About</footerHeading>
-                  <footerText>PLACEHOLDER</footerText>
+                  <FooterHeading>About</FooterHeading>
+                  <FooterText>PLACEHOLDER</FooterText>
                 </div>
               </div>
-              <footerColumn>
-                <footerHeading>Quick Forms</footerHeading>
-                <footerLink to="/members/interest">Interest Form</footerLink>
-                <footerLink to="/members/looking-for-game">Looking for Game</footerLink>
-                <footerLink to="/members/looking-for-players">Looking for Players</footerLink>
-                <footerLink to="/members/submit-homebrew">Submit Homebrew</footerLink>
-              </footerColumn>
-              <footerColumn>
-                <footerHeading>Member Tools</footerHeading>
-                <footerLink to="/members/open-games">Open Games</footerLink>
-                <footerLink to="/members/interested-players">Interested Players</footerLink>
-                <footerLink to="/members/homebrew-archive">Homebrew Archive</footerLink>
-              </footerColumn>
-            </footerRow>
-          </footerContainer>
-          <footerRow>
+              <FooterColumn>
+                <FooterHeading>Quick Forms</FooterHeading>
+                <FooterLink to="/members/interest">Interest Form</FooterLink>
+                <FooterLink to="/members/looking-for-game">Looking for Game</FooterLink>
+                <FooterLink to="/members/looking-for-players">Looking for Players</FooterLink>
+                <FooterLink to="/members/submit-homebrew">Submit Homebrew</FooterLink>
+              </FooterColumn>
+              <FooterColumn>
+                <FooterHeading>Member Tools</FooterHeading>
+                <FooterLink to="/members/open-games">Open Games</FooterLink>
+                <FooterLink to="/members/interested-players">Interested Players</FooterLink>
+                <FooterLink to="/members/homebrew-archive">Homebrew Archive</FooterLink>
+              </FooterColumn>
+            </FooterRow>
+          </FooterContainer>
+          <FooterRow>
             <div class="container">
               <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                  <footerText>Copyright &copy; 2021 All Rights Reserved by Spencer Thompson.</footerText>
+                  <FooterText>Copyright &copy; 2021 All Rights Reserved by Spencer Thompson.</FooterText>
                 </div>
               </div>
             </div>
-          </footerRow>
-        </footerBox>
+          </FooterRow>
+        </FooterBox>
     )
  }
 

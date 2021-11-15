@@ -1,7 +1,7 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const footerBox = styled.div`
+export const FooterBox = styled.div`
   padding: 80px 60px;
   background: #26272b;
   position: absolute;
@@ -9,7 +9,7 @@ export const footerBox = styled.div`
   width: 100%;
 `;
 
-export const footerRow = styled.div`
+export const FooterRow = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
   grid-gap: 20px; 
@@ -18,7 +18,7 @@ export const footerRow = styled.div`
   }
 `;
 
-export const footerContainer = styled.div`
+export const FooterContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,14 +26,14 @@ export const footerContainer = styled.div`
   margin: 0 auto;
 `;
 
-export const footerColumn = styled.div`
+export const FooterColumn = styled.div`
   display: flex;
   flex-direction: column;
   text-align: left;
   margin-left: 60px;
 `;
 
-export const footerLink = styled(Link)`
+export const FooterLink = styled(Link)`
   color: #fff;
   margin-bottom: 20px;
   text-decoration: none;
@@ -41,18 +41,18 @@ export const footerLink = styled(Link)`
     color: #E96B10;
     transition: 200ms ease-in;
   }
-  &.active {
+  &:active {
     color: #E96B10;
   }
 `;
 
-export const footerHeading = styled.h6`
+export const FooterHeading = styled.h6`
     color: #fff;
     margin-bottom: 40px;
     font-weight: bold;
 `;
 
-export const footerText = styled.p`
+export const FooterText = styled.p`
     color: #fff;
 `;
 
