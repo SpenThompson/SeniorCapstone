@@ -1,59 +1,47 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const FooterBox = styled.div`
-  padding: 80px 60px;
-  background: #26272b;
-  position: absolute;
+export const SiteFooter = styled.div`
+  background-color:#26272b;
+  display: flex;
   bottom: 0;
   width: 100%;
-`;
-
-export const FooterRow = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px; 
-  @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-`;
-
-export const FooterContainer = styled.div`
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1000px;
   margin: 0 auto;
-`;
-
-export const FooterColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  margin-left: 60px;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373; 
 `;
 
 export const FooterLink = styled(Link)`
-  color: #fff;
-  margin-bottom: 20px;
+  color: #737373;
+  display: flex;
+  align-items: center;
   text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.inline li{
+    display:inline-block;
+  }
+  &.active {
+    color: #E96B10;
+  }
   &:hover {
     color: #E96B10;
+    text-decoration: none;
     transition: 200ms ease-in;
   }
-  &:active {
-    color: #E96B10;
-  }
 `;
 
-export const FooterHeading = styled.h6`
-    color: #fff;
-    margin-bottom: 40px;
-    font-weight: bold;
-`;
-
-export const FooterText = styled.p`
-    color: #fff;
+export const FooterLinks = styled.ul`
+    padding-left:0;
+    list-style:none;
+    .li{
+        display:block;
+    }
 `;
 
 

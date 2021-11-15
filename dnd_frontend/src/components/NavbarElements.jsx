@@ -27,6 +27,11 @@ export const NavLink = styled(Link)`
   &.active {
     color: #FFFFFF;
   }
+  &:hover {
+    color: #FFFFFF;
+    text-decoration:none;
+    transition: 200ms ease-in;
+  }
 `;
 
 export const NavBrandLink = styled(Link)`
@@ -38,6 +43,10 @@ export const NavBrandLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   curosr: pointer;
+  &:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
 `;
 
 export const Bars = styled(FaBars)`
