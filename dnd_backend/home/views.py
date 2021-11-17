@@ -1,21 +1,17 @@
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
-from django import forms
-from django.core.mail import EmailMessage
-from django.template.loader import get_template
+from .models import AvailableGame, AvailablePlayer, Homebrew
+from .serializers import AvailableGameSerializer, AvailablePlayerSerializer, HomebrewSerializer
+from rest_framework import generics
 
-def landing(request):
-    return render(request, "home/landing.html")
+class AvailableGameListCreate(generics.ListCreateAPIView):
+    queryset = AvailableGame.objects.all()
+    serializer_class = AvailableGameSerializer
 
-def members(request):
-    return render(request, "home/members.html")
+class AvailablePlayerListCreate(generics.ListCreateAPIView):
+    queryset = AvailablePlayer.objects.all()
+    serializer_class = AvailablePlayerSerializer
 
-def information(request):
-    return render(request, "home/information.html")
+class HomebrewListCreate(generics.ListCreateAPIView):
+    queryset = Homebrew.objects.all()
+    serializer_class = HomebrewSerializer
 
-def services(request):
-    return render(request, "home/services.html")
-
-def contact(request):
-    return render(request, "home/contact.html")
 # Create your views here.
