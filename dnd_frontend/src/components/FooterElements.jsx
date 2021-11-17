@@ -36,6 +36,27 @@ export const FooterLink = styled(Link)`
   }
 `;
 
+export const FooterLinkA = styled.a`
+  color: #737373;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  &.inline li{
+    display:inline-block;
+  }
+  &.active {
+    color: #E96B10;
+  }
+  &:hover {
+    color: #E96B10;
+    text-decoration: none;
+    transition: 200ms ease-in;
+  }
+`;
+
 export const FooterLinks = styled.ul`
     padding-left:0;
     list-style:none;
