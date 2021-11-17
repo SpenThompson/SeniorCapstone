@@ -24,7 +24,7 @@ function Footer(props) {
                     <div class="col-xs-6 col-md-3">
                         <h6>Quick Forms</h6>
                         <FooterLinks>
-                            <li><FooterLink to="/members/interest">Interest Form</FooterLink></li>
+                            <li><FooterLink to="https://forms.gle/N78DPtMRbvnS6pWe9">Interest Form</FooterLink></li>
                             <li><FooterLink to="/members/looking-for-game">Looking for Game</FooterLink></li>
                             <li><FooterLink to="/members/looking-for-players">Looking for Players</FooterLink></li>
                             <li><FooterLink to="/members/submit-homebrew">Submit Homebrew</FooterLink></li>
