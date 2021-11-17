@@ -51,7 +51,7 @@ export const NavBrandLink = styled(Link)`
 
 export const Bars = styled(FaBars)`
   display: none;
-  color: #6b6b6b;
+  color: #bdbdbd;
   @media screen and (max-width: 768px) {
     display: block;
     position: absolute;
