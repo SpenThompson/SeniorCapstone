@@ -9,7 +9,7 @@ class AvailableGame(models.Model):
     email = models.EmailField()
     experience = models.CharField(max_length = 10)
     contentWarnings = models.CharField(max_length = 100)
-    contentAllowed = models.CharField(max_length = 10)
+    contentAllowed = models.CharField(max_length = 30)
     description = models.CharField(max_length = 300)
     created_at = models.DateTimeField(auto_now_add = True)
 
