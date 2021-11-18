@@ -1,8 +1,8 @@
 import React from "react";
 
-function Services(){
+function PlayerForm(){
   return (
-    <div className="services">
+    <div className="playerform">
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
@@ -13,7 +13,7 @@ function Services(){
             />
           </div>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">Services</h1>
+            <h1 class="font-weight-light">Looking for Game</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -27,4 +27,4 @@ function Services(){
   );
 }
 
-export default Services;
+export default PlayerForm;

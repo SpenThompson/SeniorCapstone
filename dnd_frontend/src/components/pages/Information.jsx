@@ -2,7 +2,7 @@ import React from "react";
 
 function Information(){
   return (
-    <div className="about">
+    <div className="information">
       <div class="container">
         <div class="row align-items-center my-5">
           <div class="col-lg-7">
