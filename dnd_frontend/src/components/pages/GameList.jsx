@@ -1,19 +1,25 @@
 import React from "react";
+import { Col, Container, Row,} from "reactstrap";
+import { PageBody, PageTitle } from "./PageElements";
 
 function GameList(){
   return (
     <div className="gamelist">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
-            />
-          </div>
+      <Container>
+          <Row>
+            <p><br></br></p>
+          </Row>
+          <Row>
+            <Col md={{
+            offset: 3,
+            size: 6
+            }}
+            sm="12">
+              <PageTitle>Open Games</PageTitle>
+            </Col>
+          </Row>
+      </Container>
           <div class="col-lg-5">
-            <h1 class="font-weight-light">Open Games</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
@@ -21,8 +27,6 @@ function GameList(){
               type and scrambled it to make a type specimen book.
             </p>
           </div>
-        </div>
-      </div>
     </div>
   );
 }

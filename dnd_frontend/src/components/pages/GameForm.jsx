@@ -2,20 +2,29 @@ import React from "react";
 import {
     Button,
     Col,
+    Container,
     Form,
     FormGroup,
     Input,
     Label,
     Row
 } from "reactstrap";
+import { PageBody, PageTitle } from "./PageElements";
 
 function GameForm(){
   return (
     <div className="gameform">
-      <div class="container">
-        <div class="row align-items-center my-5">
-            <h1 class="font-weight-light">Looking for Players</h1>
-        </div>
+      <Container>
+          <Row>
+            <p><br></br></p>
+          </Row>
+        <Col md={{
+            offset: 3,
+            size: 6
+            }}
+            sm="12">
+            <PageTitle>Looking for Players</PageTitle>
+        </Col>
         <Form>
             <FormGroup>
             <Row>
@@ -48,7 +57,13 @@ function GameForm(){
                                 He/Him
                             </option>
                             <option>
+                                He/They
+                            </option>
+                            <option>
                                 She/Her
+                            </option>
+                            <option>
+                                She/They
                             </option>
                             <option>
                                 They/Them
@@ -143,7 +158,7 @@ function GameForm(){
                 </Button>
             </FormGroup>
         </Form>
-      </div>
+      </Container>
     </div>
   );
 }

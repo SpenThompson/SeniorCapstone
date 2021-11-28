@@ -17,6 +17,9 @@ export const PageBody = styled.p`
     margin-bottom: 30px;
     text-align: center;
     vertical-align: middle;
+    &.inside-block{
+        color: #ffffff;
+    }
 `;
 
 export const PageCarousel = styled(UncontrolledCarousel)`
@@ -29,4 +32,20 @@ export const PageCarousel = styled(UncontrolledCarousel)`
         overflow:hidden;
         height: 300px;
     }
+`;
+
+export const PageLines = styled.div`
+    width: 70%;
+    height: .25em;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background-color: #E96B10;
+    display: inline-block;
+`;
+
+export const PageBlock = styled(Jumbotron)`
+    background-color: #000000;
+    border-radius: 0 !important;
 `;
