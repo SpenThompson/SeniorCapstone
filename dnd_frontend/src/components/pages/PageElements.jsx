@@ -22,10 +22,11 @@ export const PageBody = styled.p`
 export const PageCarousel = styled(UncontrolledCarousel)`
     width: 100%;
     height: auto;
-    &:image-wrap{
+    background-size: cover;
+    &.home-carousel{
         width:100%;
         position:relative;
         overflow:hidden;
-        height:240px;
+        height: 300px;
     }
 `;

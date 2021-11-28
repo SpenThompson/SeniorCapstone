@@ -20,7 +20,9 @@ function Home(){
           sm="12">
             <PageTitle>Home</PageTitle>
           </Col>
-          <PageCarousel
+        </Row>
+      </Container>
+          <PageCarousel className="home-carousel"
               items={[
                 {
                   altText: 'Slide 1',
@@ -39,15 +41,16 @@ function Home(){
                 }
               ]}
             />
-          <PageBody>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book.
-          </PageBody>
-        
-        </Row>
-      </Container>
+          <Container>
+            <Row>
+              <PageBody>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy text
+                ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book.
+              </PageBody>
+            </Row>
+          </Container>
     </div>
   );
 }
