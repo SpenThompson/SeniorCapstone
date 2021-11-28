@@ -1,5 +1,5 @@
 import React from "react";
-import { SiteFooter, FooterLinks, FooterLink, FooterLinkA} from './FooterElements';
+import { SiteFooter, FooterHeading, FooterLinks, FooterLink, FooterLinkA, FooterText} from './FooterElements';
 
 function Footer(props) {
     return (
@@ -8,11 +8,11 @@ function Footer(props) {
             <div class="container">
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
-                        <h6>About</h6>
-                        <p class="text-justify">PLACEHOLDER</p>
+                        <FooterHeading>ABOUT</FooterHeading>
+                        <FooterText class="text-justify">The Hendrix D&D club is a student organization on Hendrix Campus devoted to making Tabletop Roleplaying Games such as Dungeons and Dragons more accessbile to our members.</FooterText>
                     </div>
                     <div class="col-xs-6 col-md-3">
-                        <h6>Member Links</h6>
+                        <FooterHeading>MEMBER LINKS</FooterHeading>
                         <FooterLinks>
                             <li><FooterLink to="/services">Services</FooterLink></li>
                             <li><FooterLink to="/members/open-games">Open Games</FooterLink></li>
@@ -22,7 +22,7 @@ function Footer(props) {
                         </FooterLinks>
                     </div>
                     <div class="col-xs-6 col-md-3">
-                        <h6>Quick Forms</h6>
+                        <FooterHeading>QUICK FORMS</FooterHeading>
                         <FooterLinks>
                             <li><FooterLinkA href={"https://forms.gle/N78DPtMRbvnS6pWe9"} target="_blank" rel="noopener noreferrer">Interest Form</FooterLinkA></li>
                             <li><FooterLink to="/members/looking-for-game">Looking for Game</FooterLink></li>

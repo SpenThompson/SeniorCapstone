@@ -1,28 +1,53 @@
 import React from "react";
+import { Col, Container, Row,} from "reactstrap";
+import { PageBody, PageCarousel, PageTitle } from "./PageElements";
+import Slide1 from "./Resources/Home Slide 1.png";
+import Slide2 from "./Resources/Home Slide 2.png";
+import Slide3 from "./Resources/Home Slide 3.png";
 
 function Home(){
   return (
     <div className="home">
-      <div class="container">
-        <div class="row align-items-center my-5">
-          <div class="col-lg-7">
-            <img
-              class="img-fluid rounded mb-4 mb-lg-0"
-              src="http://placehold.it/900x400"
-              alt=""
+      <Container>
+        <Row>
+          <p><br></br></p>
+        </Row>
+        <Row>
+          <Col md={{
+          offset: 3,
+          size: 6
+          }}
+          sm="12">
+            <PageTitle>Home</PageTitle>
+          </Col>
+          <PageCarousel
+              items={[
+                {
+                  altText: 'Slide 1',
+                  key: 1,
+                  src: Slide1
+                },
+                {
+                  altText: 'Slide 2',
+                  key: 2,
+                  src: Slide2
+                },
+                {
+                  altText: 'Slide 3',
+                  key: 3,
+                  src: Slide3
+                }
+              ]}
             />
-          </div>
-          <div class="col-lg-5">
-            <h1 class="font-weight-light">Home</h1>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-        </div>
-      </div>
+          <PageBody>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book.
+          </PageBody>
+        
+        </Row>
+      </Container>
     </div>
   );
 }

@@ -15,10 +15,19 @@ export const SiteFooter = styled.div`
   color:#737373; 
 `;
 
+export const FooterText = styled.p`
+  font-family: 'Cabin', sans-serif;
+`;
+
+export const FooterHeading = styled.h6`
+  font-family: 'Cabin', sans-serif;
+`;
+
 export const FooterLink = styled(Link)`
   color: #737373;
   display: flex;
   align-items: center;
+  font-family: 'Cabin', sans-serif;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
@@ -43,6 +52,7 @@ export const FooterLinkA = styled.a`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
+  font-family: 'Cabin', sans-serif;
   cursor: pointer;
   &.inline li{
     display:inline-block;
