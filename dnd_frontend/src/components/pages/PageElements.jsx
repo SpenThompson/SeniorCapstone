@@ -77,6 +77,7 @@ export const PageCarousel = styled(UncontrolledCarousel)`
     }
 `;
 
+
 export const PageLines = styled.div`
     width: 70%;
     max-width: 100%;
