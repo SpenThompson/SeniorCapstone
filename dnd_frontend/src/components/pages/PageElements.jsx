@@ -30,7 +30,7 @@ export const PageButton = styled(Button)`
 
 export const PageBody = styled.p`
     font-family: 'Cabin', sans-serif;
-    font-size: 100%;
+    font-size: 120%;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 30px;
@@ -56,6 +56,7 @@ export const PageCarousel = styled(UncontrolledCarousel)`
 
 export const PageLines = styled.div`
     width: 70%;
+    max-width: 100%;
     height: .25em;
     margin-left: 15%;
     margin-right: 15%;
@@ -63,6 +64,9 @@ export const PageLines = styled.div`
     margin-bottom: 2em;
     background-color: #E96B10;
     display: inline-block;
+    &.inside-white{
+        background-color: #000000;
+    }
 `;
 
 export const PageBlock = styled(Jumbotron)`

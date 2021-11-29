@@ -55,8 +55,8 @@ function Home(){
                   <p><br></br></p>
                   <PageSubheading className="inside-block">Join Today!</PageSubheading>
                   <a href={"https://forms.gle/N78DPtMRbvnS6pWe9"} target="_blank" rel="noopener noreferrer">
-                    <PageButton color="light">
-                      CLICK HERE
+                    <PageButton color="light" outline>
+                      Click Here
                     </PageButton>
                   </a>
                 </Col>
@@ -116,6 +116,7 @@ function Home(){
                 </CardBody>
               </PageCard>
             </CardGroup>
+            <p><br></br></p>
           </Container>
     </div>
   );
