@@ -18,13 +18,13 @@ export const Nav = styled.nav`
 export const NavLink = styled(Link)`
   color: #bdbdbd;
   display: flex;
-  font-size: 19px;
+  font-size: 24px;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   &.active {
     color: #FFFFFF;
   }
@@ -43,7 +43,7 @@ export const NavBrandLink = styled(Link)`
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
-  font-family: 'Cabin', sans-serif;
+  font-family: 'Bebas Neue', cursive;
   curosr: pointer;
   &:hover {
     text-decoration: none;

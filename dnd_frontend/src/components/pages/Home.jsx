@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Container, Row,} from "reactstrap";
-import { PageBody, PageBlock, PageCarousel, PageLines, PageTitle } from "./PageElements";
+import {  CardBody, CardGroup, CardTitle, CardSubtitle, CardText, Col, Container, Row,} from "reactstrap";
+import { PageBlock, PageBody, PageButton, PageCard, PageCarousel, PageLines, PageSubheading, PageTitle } from "./PageElements";
 import Slide1 from "./Resources/Home Slide 1.png";
 import Slide2 from "./Resources/Home Slide 2.png";
 import Slide3 from "./Resources/Home Slide 3.png";
@@ -18,7 +18,7 @@ function Home(){
           size: 6
           }}
           sm="12">
-            <PageTitle>Home</PageTitle>
+            <PageTitle>Welcome</PageTitle>
           </Col>
         </Row>
       </Container>
@@ -43,18 +43,80 @@ function Home(){
             />
           <PageBlock>
             <Container>
+              <PageSubheading className="inside-block">Add Proficiency in RPGs to your character sheet!</PageSubheading>
               <PageLines />
               <Row>
-                <PageBody className="inside-block">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of
-                  type and scrambled it to make a type specimen book.
-                </PageBody>
+                <Col xs = "6">
+                  <PageBody className="inside-block">
+                    The Hendrix D&D Club is the official student organization devoted to the love of TTRPGs!  The D&D Club provides all of the necessary resources for its members to be able to play with as few bars of entry as possible!
+                  </PageBody>
+                </Col>
+                <Col xs = "6" className="text-center">
+                  <p><br></br></p>
+                  <PageSubheading className="inside-block">Join Today!</PageSubheading>
+                  <a href={"https://forms.gle/N78DPtMRbvnS6pWe9"} target="_blank" rel="noopener noreferrer">
+                    <PageButton color="light">
+                      CLICK HERE
+                    </PageButton>
+                  </a>
+                </Col>
               </Row>
-              <PageLines />
+            <PageLines />
             </Container>
           </PageBlock>
+          <Container>
+            <PageSubheading>Upcoming Events And Announcements</PageSubheading>
+            <CardGroup>
+              <PageCard>
+                <CardBody>
+                  <CardTitle tag="h5">
+                    Website Now Live
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    12-7-2021
+                  </CardSubtitle>
+                  <CardText>
+                    The Hendrix D&D Club website is live!  If you're seeing this, you're looking at it!
+                  </CardText>
+                </CardBody>
+              </PageCard>
+              <PageCard>
+                <CardBody>
+                  <CardTitle tag="h5">
+                    Dice Rental System Now Available
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    11-12-2021
+                  </CardSubtitle>
+                  <CardText>
+                    The Dice Rental System's dice have arrived!  Please email thompsonjj@hendrix.edu for inquiries!
+                  </CardText>
+                </CardBody>
+              </PageCard>
+              <PageCard>
+                <CardBody>
+                  <CardTitle tag="h5">
+                    Dice Tray Workshop
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    10-8-2021
+                  </CardSubtitle>
+                  <CardText>
+                    We are holding a Dice Tray Workshop on Friday, the 8th!  Materials will be provided, come and build your very own dice tray!
+                  </CardText>
+                </CardBody>
+              </PageCard>
+            </CardGroup>
+          </Container>
     </div>
   );
 }

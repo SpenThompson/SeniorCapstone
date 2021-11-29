@@ -1,10 +1,30 @@
 import styled from 'styled-components';
-import { UncontrolledCarousel, Jumbotron } from 'reactstrap';
+import { Button, Card, UncontrolledCarousel, Jumbotron } from 'reactstrap';
 
 export const PageTitle = styled.h1`
     font-family: 'Bebas Neue', cursive;
     font-kerning: auto;
-    font-size: 400%;
+    font-size: 500%;
+    text-align: center;
+`;
+
+export const PageCard = styled(Card)`
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+`;
+
+export const PageSubheading = styled.h2`
+    font-family: 'Bebas Neue', cursive;
+    font-kerning: auto;
+    font-size: 300%;
+    text-align: center;
+    &.inside-block{
+        color: #ffffff;
+    }
+`;
+
+export const PageButton = styled(Button)`
+    font-family: 'Cabin', sans-serif;
     text-align: center;
 `;
 
@@ -46,6 +66,6 @@ export const PageLines = styled.div`
 `;
 
 export const PageBlock = styled(Jumbotron)`
-    background-color: #000000;
+    background-color: #26272b;
     border-radius: 0 !important;
 `;

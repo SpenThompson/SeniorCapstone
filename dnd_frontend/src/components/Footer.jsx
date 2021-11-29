@@ -9,7 +9,7 @@ function Footer(props) {
                 <div class="row">
                     <div class="col-sm-12 col-md-6">
                         <FooterHeading>ABOUT</FooterHeading>
-                        <FooterText class="text-justify">The Hendrix D&D club is a student organization on Hendrix Campus devoted to making Tabletop Roleplaying Games such as Dungeons and Dragons more accessbile to our members.</FooterText>
+                        <FooterText class="text-justify">The Hendrix D&D club is a student organization on Hendrix Campus devoted to making Tabletop Roleplaying Games such as Dungeons and Dragons more accessbile to our members.  If you are interested in joining, please click on the 'interest form' link.</FooterText>
                     </div>
                     <div class="col-xs-6 col-md-3">
                         <FooterHeading>MEMBER LINKS</FooterHeading>
