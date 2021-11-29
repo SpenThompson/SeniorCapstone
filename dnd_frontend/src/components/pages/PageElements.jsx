@@ -4,13 +4,36 @@ import { Button, Card, UncontrolledCarousel, Jumbotron } from 'reactstrap';
 export const PageTitle = styled.h1`
     font-family: 'Bebas Neue', cursive;
     font-kerning: auto;
-    font-size: 500%;
+    font-size: 450%;
     text-align: center;
 `;
 
 export const PageCard = styled(Card)`
     font-family: 'Bebas Neue', cursive;
     text-align: center;
+    &.inside-block{
+        color: #ffffff;
+    }
+`;
+
+export const PageLink = styled.a`
+    color: #ffffff;
+    &.inside-white{
+        color: #000000;
+    }
+    &:hover {
+        color: #E96B10;
+        text-decoration: none;
+        transition: 200ms ease-in;
+    }
+`;
+
+export const PageList = styled.ul`
+    text-align: left;
+`;
+
+export const PageBreak = styled.hr`
+    text-decoration: none;
 `;
 
 export const PageSubheading = styled.h2`

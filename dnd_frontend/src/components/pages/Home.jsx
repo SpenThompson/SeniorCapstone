@@ -1,5 +1,5 @@
 import React from "react";
-import {  CardBody, CardGroup, CardTitle, CardSubtitle, CardText, Col, Container, Row,} from "reactstrap";
+import { CardBody, CardGroup, CardTitle, CardSubtitle, CardText, Col, Container, Row,} from "reactstrap";
 import { PageBlock, PageBody, PageButton, PageCard, PageCarousel, PageLines, PageSubheading, PageTitle } from "./PageElements";
 import Slide1 from "./Resources/Home Slide 1.png";
 import Slide2 from "./Resources/Home Slide 2.png";

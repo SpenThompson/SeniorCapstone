@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row,} from "reactstrap";
+import { Link } from "react-router-dom";
 import { PageBlock, PageBody, PageButton, PageLines, PageSubheading, PageTitle } from "./PageElements";
 
 function Members(){
@@ -36,11 +37,15 @@ function Members(){
               <Row>
                 <Col className="text-center" xs = "6">
                   <PageSubheading className="inside-block">Put up a Listing:</PageSubheading>
-                  <PageButton color="light" outline>Go to Form</PageButton>
+                  <Link to="/members/looking-for-players">
+                    <PageButton color="light" outline>Go to Form</PageButton>
+                  </Link>
                 </Col>
                 <Col className="text-center" xs = "6">
                   <PageSubheading className="inside-block">Player Listings:</PageSubheading>
-                  <PageButton color="light" outline>Go to Listings</PageButton>
+                  <Link to="/members/available-players">
+                    <PageButton color="light" outline>Go to Listings</PageButton>
+                  </Link>
                 </Col>
               </Row>
             <PageLines />
@@ -52,11 +57,15 @@ function Members(){
             <Row>
               <Col className="text-center" xs = "6">
                 <PageSubheading>Put up a Listing:</PageSubheading>
-                <PageButton color="dark" outline>Go to Form</PageButton>
+                <Link to="/members/looking-for-game">
+                  <PageButton color="dark" outline>Go to Form</PageButton>
+                </Link>
               </Col>
               <Col className="text-center" xs = "6">
                 <PageSubheading>Game Listings:</PageSubheading>
-                <PageButton color="dark" outline>Go to Listings</PageButton>
+                <Link to="/members/open-games">
+                  <PageButton color="dark" outline>Go to Listings</PageButton>
+                </Link>
               </Col>
             </Row>
           <PageLines className="inside-white"/>
@@ -68,11 +77,15 @@ function Members(){
               <Row>
                 <Col className="text-center" xs = "6">
                   <PageSubheading className="inside-block">Submit Homebrew:</PageSubheading>
-                  <PageButton color="light" outline>Go to Form</PageButton>
+                  <Link to="/members/submit-homebrew">
+                    <PageButton color="light" outline>Go to Form</PageButton>
+                  </Link>
                 </Col>
                 <Col className="text-center" xs = "6">
                   <PageSubheading className="inside-block">Homebrew Archive:</PageSubheading>
-                  <PageButton color="light" outline>Homebrew</PageButton>
+                  <Link to="/members/homebrew-archive">
+                    <PageButton color="light" outline>Homebrew</PageButton>
+                  </Link>
                 </Col>
               </Row>
             <PageLines />
@@ -83,7 +96,9 @@ function Members(){
           <Col className="text-center">
             <PageSubheading>Have questions or requests?</PageSubheading>
             <PageBody>If you have any suggestions, questions, or special requests, please contact us directly!</PageBody>
-            <PageButton color="dark" outline>Contact Us</PageButton>
+            <Link to="/contact">
+              <PageButton color="dark" outline>Contact Us</PageButton>
+            </Link>
             <p><br></br></p>
           </Col>
         </Row>
