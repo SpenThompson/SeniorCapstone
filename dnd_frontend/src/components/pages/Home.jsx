@@ -64,60 +64,63 @@ function Home(){
             <PageLines />
             </Container>
           </PageBlock>
-          <Container>
-            <PageSubheading>Upcoming Events And Announcements</PageSubheading>
-            <CardGroup>
-              <PageCard>
-                <CardBody>
-                  <CardTitle tag="h5">
-                    Website Now Live
-                  </CardTitle>
-                  <CardSubtitle
-                    className="mb-2 text-muted"
-                    tag="h6"
-                  >
-                    12-7-2021
-                  </CardSubtitle>
-                  <CardText>
-                    The Hendrix D&D Club website is live!  If you're seeing this, you're looking at it!
-                  </CardText>
-                </CardBody>
-              </PageCard>
-              <PageCard>
-                <CardBody>
-                  <CardTitle tag="h5">
-                    Dice Rental System Now Available
-                  </CardTitle>
-                  <CardSubtitle
-                    className="mb-2 text-muted"
-                    tag="h6"
-                  >
-                    11-12-2021
-                  </CardSubtitle>
-                  <CardText>
-                    The Dice Rental System's dice have arrived!  Please email thompsonjj@hendrix.edu for inquiries!
-                  </CardText>
-                </CardBody>
-              </PageCard>
-              <PageCard>
-                <CardBody>
-                  <CardTitle tag="h5">
-                    Dice Tray Workshop
-                  </CardTitle>
-                  <CardSubtitle
-                    className="mb-2 text-muted"
-                    tag="h6"
-                  >
-                    10-8-2021
-                  </CardSubtitle>
-                  <CardText>
-                    We are holding a Dice Tray Workshop on Friday, the 8th!  Materials will be provided, come and build your very own dice tray!
-                  </CardText>
-                </CardBody>
-              </PageCard>
-            </CardGroup>
-            <p><br></br></p>
-          </Container>
+          <PageBlock className="but-white">
+            <Container>
+              <PageSubheading>Upcoming Events And Announcements</PageSubheading>
+              <PageLines className="inside-white"/>
+              <CardGroup>
+                <PageCard>
+                  <CardBody>
+                    <CardTitle tag="h5">
+                      Website Now Live
+                    </CardTitle>
+                    <CardSubtitle
+                      className="mb-2 text-muted"
+                      tag="h6"
+                    >
+                      12-7-2021
+                    </CardSubtitle>
+                    <CardText>
+                      The Hendrix D&D Club website is live!  If you're seeing this, you're looking at it!
+                    </CardText>
+                  </CardBody>
+                </PageCard>
+                <PageCard>
+                  <CardBody>
+                    <CardTitle tag="h5">
+                      Dice Rental System Now Available
+                    </CardTitle>
+                    <CardSubtitle
+                      className="mb-2 text-muted"
+                      tag="h6"
+                    >
+                      11-12-2021
+                    </CardSubtitle>
+                    <CardText>
+                      The Dice Rental System's dice have arrived!  Please email thompsonjj@hendrix.edu for inquiries!
+                    </CardText>
+                  </CardBody>
+                </PageCard>
+                <PageCard>
+                  <CardBody>
+                    <CardTitle tag="h5">
+                      Dice Tray Workshop
+                    </CardTitle>
+                    <CardSubtitle
+                      className="mb-2 text-muted"
+                      tag="h6"
+                    >
+                      10-8-2021
+                    </CardSubtitle>
+                    <CardText>
+                      We are holding a Dice Tray Workshop on Friday, the 8th!  Materials will be provided, come and build your very own dice tray!
+                    </CardText>
+                  </CardBody>
+                </PageCard>
+              </CardGroup>
+              <PageLines className="inside-white"/>
+            </Container>
+          </PageBlock>
     </div>
   );
 }

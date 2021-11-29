@@ -95,4 +95,7 @@ export const PageLines = styled.div`
 export const PageBlock = styled(Jumbotron)`
     background-color: #26272b;
     border-radius: 0 !important;
+    &.but-white{
+        background-color: #ffffff;
+    }
 `;

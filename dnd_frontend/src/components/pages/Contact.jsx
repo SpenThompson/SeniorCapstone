@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Row,} from "reactstrap";
-import { PageBody, PageTitle } from "./PageElements";
+import { PageBlock, PageBody, PageLines, PageSubheading, PageTitle } from "./PageElements";
 
 function Contact(){
   return (
@@ -19,14 +19,84 @@ function Contact(){
             </Col>
           </Row>
       </Container>
-          <div class="col-lg-5">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
+      <PageBlock>
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading className="inside-block">President</PageSubheading>
+              <PageLines/>
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
+      <PageBlock className="but-white">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading>Vice President</PageSubheading>
+              <PageLines className="inside-white"/>
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
+      <PageBlock>
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading className="inside-block">Secretary</PageSubheading>
+              <PageLines />
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
+      <PageBlock className="but-white">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading>Treasurer</PageSubheading>
+              <PageLines className="inside-white"/>
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
+      <PageBlock>
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading className="inside-block">Publicist</PageSubheading>
+              <PageLines />
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
+      <PageBlock className="but-white">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading>Advisor</PageSubheading>
+              <PageLines className="inside-white" />
+            </Col>
+          </Row>
+          <Row>
+
+          </Row>
+        </Container>
+      </PageBlock>
     </div>
   );
 }

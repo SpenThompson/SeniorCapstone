@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { CardBody, CardGroup, CardImg, CardTitle, CardText, Col, Container, Row,} from "reactstrap";
-import { PageBody, PageButton, PageCard, PageLink, PageTitle } from "./PageElements";
+import { PageBody, PageButton, PageCard, PageLines, PageLink, PageTitle } from "./PageElements";
 import Discord from "./Resources/Discord Logo.png";
 import DiceCloud from "./Resources/Dicecloud Logo.png";
 import DiceRental from "./Resources/DiceRentalSystem.jpg";
@@ -23,6 +23,14 @@ function Services(){
               <PageTitle>Services</PageTitle>
             </Col>
           </Row>
+          <Row>
+            <Col className="text-center">
+              <PageBody>
+                The following services are provided to our members to use, free of charge:
+              </PageBody>
+            </Col>
+          </Row>
+          <PageLines className="inside-white"/>
       </Container>
       <PageBody>
         <CardGroup>
@@ -112,6 +120,7 @@ function Services(){
             </PageCard>
         </CardGroup>
       </PageBody>
+      <PageLines className="inside-white"/>
     </div>
   );
 }

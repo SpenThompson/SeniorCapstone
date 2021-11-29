@@ -51,25 +51,27 @@ function Members(){
             <PageLines />
           </Container>
       </PageBlock>
-      <Container>
-          <PageSubheading>Looking for a Game?</PageSubheading>
-          <PageLines className="inside-white"/>
-            <Row>
-              <Col className="text-center" xs = "6">
-                <PageSubheading>Put up a Listing:</PageSubheading>
-                <Link to="/members/looking-for-game">
-                  <PageButton color="dark" outline>Go to Form</PageButton>
-                </Link>
-              </Col>
-              <Col className="text-center" xs = "6">
-                <PageSubheading>Game Listings:</PageSubheading>
-                <Link to="/members/open-games">
-                  <PageButton color="dark" outline>Go to Listings</PageButton>
-                </Link>
-              </Col>
-            </Row>
-          <PageLines className="inside-white"/>
-      </Container>
+      <PageBlock className="but-white">
+        <Container>
+            <PageSubheading>Looking for a Game?</PageSubheading>
+            <PageLines className="inside-white"/>
+              <Row>
+                <Col className="text-center" xs = "6">
+                  <PageSubheading>Put up a Listing:</PageSubheading>
+                  <Link to="/members/looking-for-game">
+                    <PageButton color="dark" outline>Go to Form</PageButton>
+                  </Link>
+                </Col>
+                <Col className="text-center" xs = "6">
+                  <PageSubheading>Game Listings:</PageSubheading>
+                  <Link to="/members/open-games">
+                    <PageButton color="dark" outline>Go to Listings</PageButton>
+                  </Link>
+                </Col>
+              </Row>
+            <PageLines className="inside-white"/>
+        </Container>
+      </PageBlock>
       <PageBlock>
           <Container>
             <PageSubheading className="inside-block">Homebrew</PageSubheading>
@@ -91,18 +93,20 @@ function Members(){
             <PageLines />
           </Container>
       </PageBlock>
-      <Container>
-        <Row>
-          <Col className="text-center">
-            <PageSubheading>Have questions or requests?</PageSubheading>
-            <PageBody>If you have any suggestions, questions, or special requests, please contact us directly!</PageBody>
-            <Link to="/contact">
-              <PageButton color="dark" outline>Contact Us</PageButton>
-            </Link>
-            <p><br></br></p>
-          </Col>
-        </Row>
-      </Container>
+      <PageBlock className="but-white">
+        <Container>
+          <Row>
+            <Col className="text-center">
+              <PageSubheading>Have questions or requests?</PageSubheading>
+              <PageBody>If you have any suggestions, questions, or special requests, please contact us directly!</PageBody>
+              <Link to="/contact">
+                <PageButton color="dark" outline>Contact Us</PageButton>
+              </Link>
+              <p><br></br></p>
+            </Col>
+          </Row>
+        </Container>
+      </PageBlock>
     </div>
   );
 }
