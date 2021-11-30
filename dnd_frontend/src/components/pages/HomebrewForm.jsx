@@ -9,7 +9,7 @@ import {
     Label,
     Row
 } from "reactstrap";
-import { PageBody, PageTitle } from "./PageElements";
+import { PageBody, PageLines, PageTitle } from "./PageElements";
 
 function HomebrewForm(){
   return (
@@ -25,6 +25,12 @@ function HomebrewForm(){
             sm="12">
             <PageTitle>Submit Homebrew</PageTitle>
         </Col>
+        <Row>
+            <Col className="text-center">
+                <PageBody>Interested in archiving your Homebrew with the Hendrix D&D Club?  Fill out this form and our moderators will work to publish!</PageBody>
+                <PageLines className="inside-white"/>
+            </Col>
+        </Row>
         <Form>
             <FormGroup>
                 <Row>
@@ -142,6 +148,7 @@ function HomebrewForm(){
                 <Button>
                     Submit
                 </Button>
+                <PageLines className="inside-white" />
             </FormGroup>
         </Form>
       </Container>

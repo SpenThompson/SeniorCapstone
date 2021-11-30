@@ -9,7 +9,7 @@ import {
     Label,
     Row
 } from "reactstrap";
-import { PageBody, PageTitle } from "./PageElements";
+import { PageBody, PageLines, PageTitle } from "./PageElements";
 
 function PlayerForm(){
   return (
@@ -25,6 +25,12 @@ function PlayerForm(){
                 sm="12">
             <PageTitle>Looking for Game</PageTitle>
         </Col>
+        <Row>
+            <Col className="text-center">
+                <PageBody>Interested in playing but having a hard time finding a DM?  Fill out this form and watch your email!</PageBody>
+                <PageLines className="inside-white"/>
+            </Col>
+        </Row>
         <Form>
             <FormGroup>
             <Row>
@@ -126,6 +132,7 @@ function PlayerForm(){
                 <Button>
                     Submit
                 </Button>
+                <PageLines className="inside-white" />
             </FormGroup>
         </Form>
       </Container>
