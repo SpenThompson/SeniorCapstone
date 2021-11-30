@@ -1,9 +1,12 @@
 import React from "react";
 import { Col, Container, Row,} from "reactstrap";
-import { PageBlock, PageBody, PageLines, PageSubheading, PageTitle } from "./PageElements";
+import { PageBio, PageBlock, PageBody, PageLines, PageSubheading, PageTitle } from "./PageElements";
+import Andy from "./Resources/Andy.jpg";
 import Charlie from "./Resources/Charlie.jpg";
 import Hannah from "./Resources/Hannah.jpg";
 import Phillip from "./Resources/Phillip.jpg";
+import Spencer from "./Resources/Spencer.JPG";
+
 
 function Contact(){
   return (
@@ -32,8 +35,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-
+            <Col xs="2"/>
+            <Col xs="4" className="text-center">
+              <img src={Charlie} width="40%"></img>
+            </Col>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text inside-block">Grace Gobbi</PageSubheading>
+              <PageBody className="inside-block bio-text">
+                <PageBio>
+                  <li>Pronouns: She/Her</li>
+                  <li>Email: gobbige@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
+            </Col>
           </Row>
+          <PageLines/>
         </Container>
       </PageBlock>
       <PageBlock className="but-white">
@@ -45,8 +61,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-
+            <Col xs="2"/>
+            <Col xs="4" className="text-center">
+              <img src={Spencer} width="40%"></img>
+            </Col>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text">Spencer Thompson</PageSubheading>
+              <PageBody className="bio-text">
+                <PageBio>
+                  <li>Pronouns: He/They</li>
+                  <li>Email: thompsonjj@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
+            </Col>
           </Row>
+          <PageLines className="inside-white"/>
         </Container>
       </PageBlock>
       <PageBlock>
@@ -58,13 +87,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-            <Col xs="6" className="text-center">
+            <Col xs="2"/>
+            <Col xs="4" className="text-center">
               <img src={Hannah} width="40%"></img>
             </Col>
-            <Col xs="6" className="text-left">
-              <PageSubheading className="inside-block">Hannah Diggs</PageSubheading>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text inside-block">Hannah Diggs</PageSubheading>
+              <PageBody className="inside-block bio-text">
+                <PageBio>
+                  <li>Pronouns: She/Her</li>
+                  <li>Email: diggshm@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
             </Col>
           </Row>
+          <PageLines />
         </Container>
       </PageBlock>
       <PageBlock className="but-white">
@@ -76,13 +113,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-            <Col xs="6" className="text-center">
-              <img src={Phillip} width="50%"></img>
+            <Col xs="2"/>
+            <Col xs="4" className="text-center">
+              <img src={Phillip} width="40%"></img>
             </Col>
-            <Col xs="6" className="text-left">
-              <PageSubheading>Phillip Powell</PageSubheading>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text">Phillip Powell</PageSubheading>
+              <PageBody className="bio-text">
+                <PageBio>
+                  <li>Pronouns: He/Him</li>
+                  <li>Email: powellpa@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
             </Col>
           </Row>
+          <PageLines className="inside-white" />
         </Container>
       </PageBlock>
       <PageBlock>
@@ -94,13 +139,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-            <Col xs="6" className="text-center">
+            <Col xs="2"/>
+            <Col xs="4" className="text-center">
               <img src={Charlie} width="40%"></img>
             </Col>
-            <Col xs="6" className="text-left">
-              <PageSubheading className="inside-block">Charlie Stewart</PageSubheading>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text inside-block">Charlie Stewart</PageSubheading>
+              <PageBody className="inside-block bio-text">
+                <PageBio>
+                  <li>Pronouns: They/Them</li>
+                  <li>Email: stewartcr@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
             </Col>
           </Row>
+          <PageLines />
         </Container>
       </PageBlock>
       <PageBlock className="but-white">
@@ -112,8 +165,21 @@ function Contact(){
             </Col>
           </Row>
           <Row>
-
+          <Col xs="2"/>
+            <Col xs="4" className="text-center">
+              <img src={Andy} width="40%"></img>
+            </Col>
+            <Col xs="4" className="text-left">
+              <PageSubheading className="bio-text">Andy Vaught</PageSubheading>
+              <PageBody className="bio-text">
+                <PageBio>
+                  <li>Pronouns: He/Him</li>
+                  <li>Email: vaught@hendrix.edu</li>
+                </PageBio>
+              </PageBody>
+            </Col>
           </Row>
+          <PageLines className="inside-white"/>
         </Container>
       </PageBlock>
     </div>

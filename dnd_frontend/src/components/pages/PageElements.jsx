@@ -41,6 +41,10 @@ export const PageSubheading = styled.h2`
     font-kerning: auto;
     font-size: 300%;
     text-align: center;
+    &.bio-text{
+        text-align: left;
+        font-size: 200%;
+    }
     &.inside-block{
         color: #ffffff;
     }
@@ -60,6 +64,9 @@ export const PageBody = styled.p`
     margin-bottom: 30px;
     text-align: center;
     vertical-align: middle;
+    &.bio-text{
+        text-align: left;
+    }
     &.inside-block{
         color: #ffffff;
     }
@@ -76,6 +83,14 @@ export const PageCarousel = styled(UncontrolledCarousel)`
         height: 300px;
     }
 `;
+
+export const PageBio = styled.ul`
+    padding-left:0;
+    list-style:none;
+    .li{
+        display:block;
+    }
+`
 
 
 export const PageLines = styled.div`
