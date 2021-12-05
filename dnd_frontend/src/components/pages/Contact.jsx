@@ -38,7 +38,7 @@ function Contact(){
           <Row>
             <Col xs="2"/>
             <Col xs="4" className="text-center">
-              <img src={Grace} width="60%"></img>
+              <img src={Grace} width="60%" alt="Grace Gobbi"></img>
             </Col>
             <Col className="text-left">
               <PageSubheading className="bio-text inside-block">Grace Gobbi</PageSubheading>
@@ -69,7 +69,7 @@ function Contact(){
               <img src={Spencer} width="60%"></img>
             </Col>
             <Col className="text-left">
-              <PageSubheading className="bio-text">Spencer Thompson</PageSubheading>
+              <PageSubheading className="bio-text" alt="Spencer Thompson">Spencer Thompson</PageSubheading>
               <PageBody className="bio-text">
                 <PageBio>
                   <li><u>Pronouns:</u> He/They</li>
@@ -94,7 +94,7 @@ function Contact(){
           <Row>
             <Col xs="2"/>
             <Col xs="4" className="text-center">
-              <img src={Hannah} width="60%"></img>
+              <img src={Hannah} width="60%" alt="Hannah Diggs"></img>
             </Col>
             <Col className="text-left">
               <PageSubheading className="bio-text inside-block">Hannah Diggs</PageSubheading>
@@ -122,7 +122,7 @@ function Contact(){
           <Row>
             <Col xs="2"/>
             <Col xs="4" className="text-center">
-              <img src={Phillip} width="60%"></img>
+              <img src={Phillip} width="60%" alt="Phillip Powell"></img>
             </Col>
             <Col className="text-left">
               <PageSubheading className="bio-text">Phillip Powell</PageSubheading>
@@ -150,7 +150,7 @@ function Contact(){
           <Row>
             <Col xs="2"/>
             <Col xs="4" className="text-center">
-              <img src={Charlie} width="60%"></img>
+              <img src={Charlie} width="60%" alt="Charlie Stewart"></img>
             </Col>
             <Col className="text-left">
               <PageSubheading className="bio-text inside-block">Charlie Stewart</PageSubheading>
@@ -178,7 +178,7 @@ function Contact(){
           <Row>
           <Col xs="2"/>
             <Col xs="4" className="text-center">
-              <img src={Andy} width="60%"></img>
+              <img src={Andy} width="60%" alt="Andy Vaught"></img>
             </Col>
             <Col className="text-left">
               <PageSubheading className="bio-text">Andy Vaught</PageSubheading>

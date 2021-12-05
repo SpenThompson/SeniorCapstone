@@ -41,6 +41,7 @@ function GameForm(){
                         name="firstName"
                         id="firstName"
                         placeholder="Enter your first name"
+                        maxLength="20"
                             />
                     </Col>
                     <Col xs="5">
@@ -50,6 +51,7 @@ function GameForm(){
                         name="lastName"
                         id="lastName"
                         placeholder="Enter your last name"
+                        maxLength="30"
                         />
                     </Col>
                     <Col xs="2">
@@ -123,6 +125,7 @@ function GameForm(){
                         name="contentWarnings"
                         id="contentWarnings"
                         placeholder="Enter any possibly triggering material"
+                        maxLength="100"
                             />
                     </Col>
                 </Row>
@@ -155,6 +158,7 @@ function GameForm(){
                 name="description"
                 id="description"
                 placeholder="Give a short description of your game..."
+                maxLength="300"
                     />
                 <div>
                     <p> </p>

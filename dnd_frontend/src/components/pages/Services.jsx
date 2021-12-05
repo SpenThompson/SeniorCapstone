@@ -48,7 +48,7 @@ function Services(){
                 <CardText>
                   The Official Hendrix D&D Club Discord, join for resources, discussion, and virtual tables!
                 </CardText>
-                <a href="https://discord.gg/XtHeDa3XBs" target="_blank">
+                <a href="https://discord.gg/XtHeDa3XBs" target="_blank" rel="noreferrer">
                   <PageButton color="dark" outline>
                     Click Here
                   </PageButton>
@@ -69,7 +69,7 @@ function Services(){
                 <CardText>
                   Character sheets, campaign trackers and more! Have your DM contact us for credentials!
                 </CardText>
-                <PageLink href="https://www.dndbeyond.com/" target="_blank">
+                <PageLink href="https://www.dndbeyond.com/" target="_blank" rel="noreferrer">
                   <PageButton color="dark" outline>
                     Click Here
                   </PageButton>
@@ -90,7 +90,7 @@ function Services(){
                 <CardText>
                   Free to use, super customizable character sheets with deep capabilities for homebrew!
                 </CardText>
-                <PageLink href="https://www.dicecloud.com/" target="_blank">
+                <PageLink href="https://www.dicecloud.com/" target="_blank" rel="noreferrer">
                   <PageButton color="dark" outline>
                     Click Here
                   </PageButton>

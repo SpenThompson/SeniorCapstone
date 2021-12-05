@@ -41,6 +41,7 @@ function HomebrewForm(){
                         name="firstName"
                         id="firstName"
                         placeholder="Enter your first name"
+                        maxLength="20"
                             />
                     </Col>
                     <Col xs="5">
@@ -50,6 +51,7 @@ function HomebrewForm(){
                         name="lastName"
                         id="lastName"
                         placeholder="Enter your last name"
+                        maxLength="30"
                         />
                     </Col>
                     <Col xs="2">
@@ -132,6 +134,7 @@ function HomebrewForm(){
                         name="name"
                         id="name"
                         placeholder="Homebrew Name"
+                        maxLength="20"
                             />
                     </Col>
                 </Row>
@@ -141,6 +144,7 @@ function HomebrewForm(){
                 name="description"
                 id="description"
                 placeholder="Give a description of your homebrew..."
+                maxLength="500"
                     />
                 <div>
                     <p> </p>

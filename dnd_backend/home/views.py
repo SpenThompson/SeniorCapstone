@@ -1,20 +1,20 @@
 from .models import AvailableGame, AvailablePlayer, Homebrew, DiceSet
 from .serializers import AvailableGameSerializer, AvailablePlayerSerializer, HomebrewSerializer, DiceSerializer
-from rest_framework import generics
+from rest_framework import viewsets
 
-class AvailableGameListCreate(generics.ListCreateAPIView):
+class AvailableGameListCreate(viewsets.ModelViewSet):
     queryset = AvailableGame.objects.all()
     serializer_class = AvailableGameSerializer
 
-class AvailablePlayerListCreate(generics.ListCreateAPIView):
+class AvailablePlayerListCreate(viewsets.ModelViewSet):
     queryset = AvailablePlayer.objects.all()
     serializer_class = AvailablePlayerSerializer
 
-class HomebrewListCreate(generics.ListCreateAPIView):
+class HomebrewListCreate(viewsets.ModelViewSet):
     queryset = Homebrew.objects.all()
     serializer_class = HomebrewSerializer
 
-class DiceSetListCreate(generics.ListCreateAPIView):
+class DiceSetListCreate(viewsets.ModelViewSet):
     queryset = DiceSet.objects.all()
     serializer_class = DiceSerializer
 

@@ -15,8 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from rest_framework import routers
+from home import views
+
+router = routers.DefaultRouter()
+router.register(r"players", views.AvailablePlayerListCreate, "home")
+router.register(r"games", views.AvailableGameListCreate, "home")
+router.register(r"homebrew", views.HomebrewListCreate, "home")
+router.register(r"drs", views.DiceSetListCreate, "home")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/', include(router.urls)),
     path("", include('home.urls')),
 ]

@@ -9,7 +9,7 @@ class AvailableGame(models.Model):
     email = models.EmailField()
     experience = models.CharField(max_length = 10)
     contentWarnings = models.CharField(max_length = 100)
-    contentAllowed = models.CharField(max_length = 30)
+    contentAllowed = models.CharField(max_length = 32)
     description = models.CharField(max_length = 300)
     created_at = models.DateTimeField(auto_now_add = True)
 
@@ -29,7 +29,7 @@ class Homebrew(models.Model):
     pronouns = models.CharField(max_length = 10)
     email = models.EmailField()
     # The Nitty Gritty
-    type = models.CharField(max_length = 10)
+    type = models.CharField(max_length = 12)
     name = models.CharField(max_length = 20)
     description = models.CharField(max_length = 500)
     created_at = models.DateTimeField(auto_now_add = True)

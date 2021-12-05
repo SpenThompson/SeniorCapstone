@@ -57,7 +57,7 @@ function Information(){
               <PageBody>To be a member of the Hendrix D&D Club, you must:
                 <PageBreak />
                 <PageList>
-                  <li>Fill Out the <PageLink className="inside-white" href={"https://forms.gle/N78DPtMRbvnS6pWe9"} target="_blank" rel="noopener noreferrer">Interest Form</PageLink> as completely as possible</li>
+                  <li>Fill Out the <PageLink className="inside-white" href={"https://forms.gle/N78DPtMRbvnS6pWe9"} target="_blank" rel="noreferrer">Interest Form</PageLink> as completely as possible</li>
                   <li>Attend at least one of our meetings or events, which you will be notified of through email</li>
                   <li>And you're done!  All of the D&D Club's resources are open to you!</li>
                 </PageList>

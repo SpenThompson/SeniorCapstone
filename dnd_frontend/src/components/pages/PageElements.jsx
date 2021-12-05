@@ -41,9 +41,16 @@ export const PageSubheading = styled.h2`
     font-kerning: auto;
     font-size: 300%;
     text-align: center;
+    &.list-text{
+        text-align: inherit;
+    }
     &.bio-text{
         text-align: left;
         font-size: 200%;
+    }
+    &.small{
+        text-align: inherit;
+        font-size: 100%;
     }
     &.inside-block{
         color: #ffffff;
