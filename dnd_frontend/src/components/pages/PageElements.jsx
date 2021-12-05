@@ -66,6 +66,7 @@ export const PageBody = styled.p`
     vertical-align: middle;
     &.bio-text{
         text-align: left;
+        margin-left: 0%;
     }
     &.inside-block{
         color: #ffffff;

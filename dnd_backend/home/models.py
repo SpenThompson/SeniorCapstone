@@ -33,3 +33,14 @@ class Homebrew(models.Model):
     name = models.CharField(max_length = 20)
     description = models.CharField(max_length = 500)
     created_at = models.DateTimeField(auto_now_add = True)
+
+class DiceSet(models.Model):
+    dice_id = models.CharField(max_length = 3)
+    dice_description = models.CharField(max_length = 30)
+    dice_rented = models.BooleanField()
+    firstName = models.CharField(max_length = 20)
+    lastName = models.CharField(max_length = 30)
+    pronouns = models.CharField(max_length = 10)
+    email = models.EmailField()
+    checkout_date = models.DateTimeField()
+    due_date = models.DateTimeField()
