@@ -1,59 +1,25 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { Col, Container, Row,} from "reactstrap";
 import { Link } from "react-router-dom";
-import { PageBody, PageButton, PageLink, PageList, PageSubheading, PageTitle } from "./PageElements";
+import HomebrewListing  from "./HomebrewListing";
+import { PageBlock, PageButton, PageLines, PageSubheading, PageTitle } from "./PageElements";
 import axios from "axios";
 
 function HomebrewList(){
-  let [homebrews, setHomebrew] = useState('');
+  const [homebrews, setHomebrew] = useState([]);
   
   const getData = useCallback(() => {
     axios
       .get("/api/homebrew/")
       .then((response) => {
-        console.log(response.data)
         setHomebrew(response.data)
+        console.log(homebrews)
       })
       .catch((err) => console.log(err));
       }, [])
-
   useEffect(() => {
     getData()
   }, [getData]);
-
-  const renderHomebrew = () => {
-    return homebrews.map((item) => (
-        <Container>
-          <Row>
-            <Col className="text-left">
-              <PageSubheading className="list-text">
-                {item.name}
-              </PageSubheading>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs="9" className="text-left">
-              <PageBody>{item.type}</PageBody>
-            </Col>
-            <Col xs="3">
-              <PageSubheading className="small">Author Info</PageSubheading>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs="9" className="text-left">
-              <PageBody>{item.description}</PageBody>
-            </Col>
-            <Col xs="3">
-              <PageList>
-                <li><u>Name:</u> {item.firstName} {item.lastName}</li>
-                <li><u>Pronouns:</u> {item.pronouns}</li>
-                <li><u>Email:</u> <PageLink href={"mailto: {item.email}"}>{item.email}</PageLink></li>
-              </PageList>
-            </Col>
-          </Row>
-        </Container>
-    ));
-  }
 
   return (
     <div className="homebrewlist">
@@ -79,7 +45,11 @@ function HomebrewList(){
             </Col>
           </Row>
       </Container>
-      {renderHomebrew}
+      <PageLines className="inside-white"/>
+      <PageBlock className="but-white">
+        <HomebrewListing entries={homebrews}/>
+      </PageBlock>
+      <PageLines className="inside-white"/>
     </div>
   );
 }

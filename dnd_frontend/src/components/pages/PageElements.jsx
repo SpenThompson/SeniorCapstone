@@ -52,6 +52,9 @@ export const PageSubheading = styled.h2`
         text-align: inherit;
         font-size: 100%;
     }
+    &.less-small{
+        font-size: 150%;
+    }
     &.inside-block{
         color: #ffffff;
     }
@@ -71,6 +74,13 @@ export const PageBody = styled.p`
     margin-bottom: 30px;
     text-align: center;
     vertical-align: middle;
+    &.no-margin{
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        text-align: inherit;
+    }
     &.bio-text{
         text-align: left;
         margin-left: 0%;
