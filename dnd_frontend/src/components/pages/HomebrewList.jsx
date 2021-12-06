@@ -13,7 +13,6 @@ function HomebrewList(){
       .get("/api/homebrew/")
       .then((response) => {
         setHomebrew(response.data)
-        console.log(homebrews)
       })
       .catch((err) => console.log(err));
       }, [])

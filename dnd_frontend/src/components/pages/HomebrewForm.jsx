@@ -41,23 +41,24 @@ function HomebrewForm(){
         <Form>
             <FormGroup>
                 <Row>
-                    <Col xs="5">
+                    <Col xs="1" />
+                    <Col xs="4">
                         <Label for="firstName">First Name</Label>
                         <Input
                         type="text"
                         name="firstName"
                         id="firstName"
-                        placeholder="Enter your first name"
+                        placeholder="Enter your first name..."
                         maxLength="20"
                             />
                     </Col>
-                    <Col xs="5">
+                    <Col xs="4">
                         <Label for="lastName">Last Name</Label>
                         <Input
                         type="text"
                         name="lastName"
                         id="lastName"
-                        placeholder="Enter your last name"
+                        placeholder="Enter your last name..."
                         maxLength="30"
                         />
                     </Col>
@@ -88,8 +89,10 @@ function HomebrewForm(){
                             </option>
                         </Input>
                     </Col>
+                    <Col xs="1"/>
                 </Row>
                 <Row>
+                    <Col xs="1"/>
                     <Col>
                         <Label for="email">Email</Label>
                         <Input
@@ -102,8 +105,10 @@ function HomebrewForm(){
                             <p> </p>
                         </div>
                     </Col>
+                    <Col xs="1"/>
                 </Row>
                 <Row>
+                    <Col xs="1"/>
                     <Col xs="4">
                         <Label for="type">Type of Homebrew</Label>
                         <Input
@@ -134,7 +139,7 @@ function HomebrewForm(){
                             </option>
                         </Input>
                     </Col>
-                    <Col xs="8">
+                    <Col xs="6">
                         <Label for="name">Name of Homebrew</Label>
                         <Input
                         type="text"
@@ -144,21 +149,34 @@ function HomebrewForm(){
                         maxLength="20"
                             />
                     </Col>
+                    <Col xs="1"/>
                 </Row>
-                <Label for="description">Description</Label>
-                <Input
-                type="textarea"
-                name="description"
-                id="description"
-                placeholder="Give a description of your homebrew..."
-                maxLength="500"
-                    />
+                <Row>
+                    <Col xs="1"/>
+                    <Col xs="10">
+                        <Label for="description">Description</Label>
+                        <Input
+                        type="textarea"
+                        name="description"
+                        id="description"
+                        placeholder="Give a description of your homebrew..."
+                        maxLength="500"
+                            />
+                    </Col>
+                    <Col xs="1"/>
+                </Row>
                 <div>
                     <p> </p>
                 </div>
-                <Button>
-                    Submit
-                </Button>
+                <Row>
+                    <Col xs="1"/>
+                    <Col>
+                        <Button>
+                            Submit
+                        </Button>
+                    </Col>
+                    <Col xs="1"/>
+                </Row>
                 <PageLines className="inside-white" />
             </FormGroup>
         </Form>

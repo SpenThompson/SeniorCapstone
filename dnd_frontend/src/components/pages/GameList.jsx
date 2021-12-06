@@ -1,8 +1,25 @@
-import React from "react";
+import React, {useCallback, useState, useEffect} from "react";
 import { Col, Container, Row,} from "reactstrap";
-import { PageBody, PageTitle } from "./PageElements";
+import { Link } from "react-router-dom";
+import GameListing from "./GameListing";
+import { PageBlock, PageButton, PageLines, PageSubheading, PageTitle } from "./PageElements";
+import axios from "axios";
 
 function GameList(){
+  const [games, setGames] = useState([]);
+
+  const getData = useCallback(() => {
+    axios
+      .get("/api/games/")
+      .then((response) => {
+        setGames(response.data)
+      })
+      .catch((err) => console.log(err));
+      }, [])
+  useEffect(() => {
+    getData()
+  }, [getData]);
+
   return (
     <div className="gamelist">
       <Container>
@@ -18,15 +35,20 @@ function GameList(){
               <PageTitle>Open Games</PageTitle>
             </Col>
           </Row>
+          <Row>
+            <Col className="text-right">
+              <PageSubheading className="small">Want to post about your own game?</PageSubheading>
+              <Link to="/members/looking-for-players">
+                <PageButton color="dark" outline>Click Here</PageButton>
+              </Link>
+            </Col>
+          </Row>
       </Container>
-          <div class="col-lg-5">
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
+      <PageLines className="inside-white"/>
+      <PageBlock className="but-white">
+        <GameListing entries={games}/>
+      </PageBlock>
+      <PageLines className="inside-white"/>
     </div>
   );
 }

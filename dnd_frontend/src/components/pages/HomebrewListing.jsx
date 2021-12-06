@@ -11,6 +11,7 @@ export default function HomebrewListing(props) {
           return(
             <Container>
               <Row>
+                <Col xs="1"/>
                 <Col className="text-left">
                   <PageSubheading className="list-text">
                     {entry.name}
@@ -18,15 +19,18 @@ export default function HomebrewListing(props) {
                 </Col>
               </Row>
               <Row>
-                <Col xs="8" className="text-left">
+                <Col xs="1" />
+                <Col xs="6" className="text-left">
                   <PageBody className="no-margin"><u>Type:</u> {entry.type}</PageBody>
                 </Col>
                 <Col xs="4">
                   <PageSubheading className="small">Author Info</PageSubheading>
                 </Col>
+                <Col xs="1" />
               </Row>
               <Row>
-                <Col xs="8" className="text-left">
+                <Col xs="1" />
+                <Col xs="6" className="text-left">
                   <PageBody className="no-margin"><u>Description: </u>{entry.description}</PageBody>
                 </Col>
                 <Col xs="4">
@@ -36,6 +40,7 @@ export default function HomebrewListing(props) {
                     <li><u>Email:</u> <PageLink className="inside-white" href={emailLink}>{entry.email}</PageLink></li>
                   </PageList>
                 </Col>
+                <Col xs="1" />
               </Row>
             </Container>
           )
