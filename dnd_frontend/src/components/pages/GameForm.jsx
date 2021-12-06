@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Button,
     Col,
@@ -10,8 +10,74 @@ import {
     Row
 } from "reactstrap";
 import { PageBody, PageLines, PageTitle } from "./PageElements";
+import axios from "axios";
 
 function GameForm(){
+  const [game, setGame] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [pronouns, setPronouns] = useState("");
+  const [email, setEmail] = useState("");
+  const [experience, setExperience] = useState("");
+  const [contentWarnings, setContentWarnings] = useState("");
+  const [contentAllowed, setContentAllowed] = useState("");
+  const [description, setDescription] = useState("");
+
+  useEffect(() => {
+      axios.get("/api/games/1").then((response) => {
+        setGame(response.data);
+      });
+  }, [])
+
+  const handleFirstName = (e) => {
+      setFirstName(e.target.value);
+  }
+
+  const handleLastName = (e) => {
+      setLastName(e.target.value);
+  }
+
+  const handlePronouns = (e) => {
+      setPronouns(e.target.value);
+  }
+
+  const handleEmail = (e) => {
+      setEmail(e.target.value);
+  }
+
+  const handleExperience = (e) => {
+      setExperience(e.target.value);
+  }
+
+  const handleContentWarnings = (e) => {
+      setContentWarnings(e.target.value);
+  }
+
+  const handleContentAllowed = (e) => {
+      setContentAllowed(e.target.value);
+  }
+
+  const handleDescription = (e) => {
+      setDescription(e.target.value);
+  }
+
+  const handleSubmit = () => {
+    axios
+     .post("/api/games/", {
+        firstName: firstName,
+        lastName: lastName,
+        pronouns: pronouns,
+        email: email,
+        experience: experience,
+        contentWarnings: contentWarnings,
+        contentAllowed: contentAllowed,
+        description: description
+     })
+     .then((response) => {
+         setGame(response.data)
+     });
+  }
+
   return (
     <div className="gameform">
       <Container>
@@ -31,7 +97,7 @@ function GameForm(){
                 <PageLines className="inside-white"/>
             </Col>
         </Row>
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <FormGroup>
             <Row>
                 <Col xs="1"/>
@@ -43,6 +109,7 @@ function GameForm(){
                     id="firstName"
                     placeholder="Enter your first name..."
                     maxLength="20"
+                    onChange={handleFirstName}
                         />
                 </Col>
                 <Col xs="4">
@@ -53,6 +120,7 @@ function GameForm(){
                     id="lastName"
                     placeholder="Enter your last name..."
                     maxLength="30"
+                    onChange={handleLastName}
                     />
                 </Col>
                 <Col xs="2">
@@ -61,6 +129,7 @@ function GameForm(){
                     type="select"
                     name="pronouns"
                     id="pronouns"
+                    onChange={handlePronouns}
                     >
                         <option>
                             He/Him
@@ -93,6 +162,7 @@ function GameForm(){
                     name="email"
                     id="email"
                     placeholder="YourEmail@hendrix.edu"
+                    onChange={handleEmail}
                         />
                 </Col>
                 <Col xs="5">
@@ -101,6 +171,7 @@ function GameForm(){
                     type="select"
                     name="experience"
                     id="experience"
+                    onChange={handleExperience}
                     >
                         <option>
                             Rookie
@@ -131,6 +202,7 @@ function GameForm(){
                     id="contentWarnings"
                     placeholder="Enter any possibly triggering material you have planned for your game..."
                     maxLength="100"
+                    onChange={handleContentWarnings}
                         />
                 </Col>
                 <Col xs="1"/>
@@ -143,6 +215,7 @@ function GameForm(){
                     type="select"
                     name="contentAllowed"
                     id="contentAllowed"
+                    onChange={handleContentAllowed}
                     >
                         <option>
                             All Allowed
@@ -170,6 +243,7 @@ function GameForm(){
                     id="description"
                     placeholder="Give a short description of your game..."
                     maxLength="300"
+                    onChange={handleDescription}
                         />
                 </Col>
                 <Col xs="1"/>
@@ -180,7 +254,7 @@ function GameForm(){
             <Row>
                 <Col xs="1"/>
                 <Col>
-                    <Button>
+                    <Button type="submit" color="dark" outline>
                         Submit
                     </Button>
                 </Col>

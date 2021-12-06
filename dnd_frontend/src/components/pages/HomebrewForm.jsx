@@ -1,4 +1,4 @@
-import React, { useState, } from "react";
+import React, { useEffect, useState } from "react";
 import {
     Button,
     Col,
@@ -13,11 +13,61 @@ import axios from "axios";
 import { PageBody, PageLines, PageTitle } from "./PageElements";
 
 function HomebrewForm(){
+  const [homebrew, setHomebrew] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [pronouns, setPronouns] = useState("");
+  const [email, setEmail] = useState("");
+  const [type, setType] = useState("");
+  const [name, setName] = useState("");
+  const [description, setDescription] = useState("");
 
-  const [submission, setSubmission] = useState([]);
-  React.useEffect(() => {
-    
-  }, []);
+  useEffect(() => {
+      axios.get("/api/homebrew/1").then((response) => {
+          setHomebrew(response.data);
+      });
+  }, [])
+
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
+  }
+
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+  }
+
+  const handlePronouns = (e) => {
+    setPronouns(e.target.value);
+  }
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleType = (e) => {
+    setType(e.target.value);
+  }
+
+  const handleName = (e) => {
+    setName(e.target.value);
+  }
+
+  const handleDescription = (e) => {
+    setDescription(e.target.value);
+  }
+
+  const handleSubmit = () => {
+    axios
+     .post("/api/homebrew/", {
+         firstName: firstName,
+         lastName: lastName,
+         pronouns: pronouns,
+         email: email,
+         type: type,
+         name: name,
+         description: description
+     })
+  }
 
   return (
     <div className="homebrewform">
@@ -38,7 +88,7 @@ function HomebrewForm(){
                 <PageLines className="inside-white"/>
             </Col>
         </Row>
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <FormGroup>
                 <Row>
                     <Col xs="1" />
@@ -50,6 +100,7 @@ function HomebrewForm(){
                         id="firstName"
                         placeholder="Enter your first name..."
                         maxLength="20"
+                        onChange={handleFirstName}
                             />
                     </Col>
                     <Col xs="4">
@@ -60,6 +111,7 @@ function HomebrewForm(){
                         id="lastName"
                         placeholder="Enter your last name..."
                         maxLength="30"
+                        onChange={handleLastName}
                         />
                     </Col>
                     <Col xs="2">
@@ -68,6 +120,7 @@ function HomebrewForm(){
                         type="select"
                         name="pronouns"
                         id="pronouns"
+                        onChange={handlePronouns}
                         >
                             <option>
                                 He/Him
@@ -100,6 +153,7 @@ function HomebrewForm(){
                         name="email"
                         id="email"
                         placeholder="YourEmail@hendrix.edu"
+                        onChange={handleEmail}
                             />
                         <div>
                             <p> </p>
@@ -115,6 +169,7 @@ function HomebrewForm(){
                         type="select"
                         name="type"
                         id="type"
+                        onChange={handleType}
                         >
                             <option>
                                 Race/Subrace
@@ -147,6 +202,7 @@ function HomebrewForm(){
                         id="name"
                         placeholder="Homebrew Name"
                         maxLength="20"
+                        onChange={handleName}
                             />
                     </Col>
                     <Col xs="1"/>
@@ -161,6 +217,7 @@ function HomebrewForm(){
                         id="description"
                         placeholder="Give a description of your homebrew..."
                         maxLength="500"
+                        onChange={handleDescription}
                             />
                     </Col>
                     <Col xs="1"/>
@@ -171,7 +228,7 @@ function HomebrewForm(){
                 <Row>
                     <Col xs="1"/>
                     <Col>
-                        <Button>
+                        <Button color="dark" type="submit" outline>
                             Submit
                         </Button>
                     </Col>

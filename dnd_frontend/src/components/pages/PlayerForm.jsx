@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
     Button,
     Col,
@@ -10,8 +10,62 @@ import {
     Row
 } from "reactstrap";
 import { PageBody, PageLines, PageTitle } from "./PageElements";
+import axios from "axios";
 
 function PlayerForm(){
+  const [player, setPlayer] = useState(null);
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [pronouns, setPronouns] = useState("");
+  const [email, setEmail] = useState("");
+  const [experience, setExperience] = useState("");
+  const [contentWarnings, setContentWarnings] = useState("");
+
+  useEffect(() => {
+    axios.get("/api/players/1").then((response) => {
+      setPlayer(response.data);
+    });
+  }, [])
+
+  const handleFirstName = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastName = (e) => {
+    setLastName(e.target.value);
+  }
+
+  const handlePronouns = (e) => {
+    setPronouns(e.target.value);
+  }
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  }
+
+  const handleExperience = (e) => {
+    setExperience(e.target.value);
+  }
+
+  const handleContentWarnings = (e) => {
+    setContentWarnings(e.target.value);
+  }
+
+  const handleSubmit = () => {
+    axios
+     .post("/api/players/", {
+        firstName: firstName,
+        lastName: lastName,
+        pronouns: pronouns,
+        email: email,
+        experience: experience,
+        contentWarnings: contentWarnings
+     })
+     .then((response) => {
+         setPlayer(response.data)
+     });
+  }
+
   return (
     <div className="playerform">
       <Container>
@@ -31,7 +85,7 @@ function PlayerForm(){
                 <PageLines className="inside-white"/>
             </Col>
         </Row>
-        <Form>
+        <Form onSubmit={handleSubmit}>
             <FormGroup>
             <Row>
                 <Col xs="1"/>
@@ -42,6 +96,7 @@ function PlayerForm(){
                     name="firstName"
                     id="firstName"
                     placeholder="Enter your first name..."
+                    onChange={handleFirstName}
                         />
                 </Col>
                 <Col xs="4">
@@ -51,6 +106,7 @@ function PlayerForm(){
                     name="lastName"
                     id="lastName"
                     placeholder="Enter your last name..."
+                    onChange={handleLastName}
                     />
                 </Col>
                 <Col xs="2">
@@ -59,6 +115,7 @@ function PlayerForm(){
                     type="select"
                     name="pronouns"
                     id="pronouns"
+                    onChange={handlePronouns}
                     >
                         <option>
                             He/Him
@@ -91,6 +148,7 @@ function PlayerForm(){
                     name="email"
                     id="email"
                     placeholder="YourEmail@hendrix.edu"
+                    onChange={handleEmail}
                         />
                 </Col>
                 <Col xs="5">
@@ -99,6 +157,7 @@ function PlayerForm(){
                     type="select"
                     name="experience"
                     id="experience"
+                    onChange={handleExperience}
                     >
                         <option>
                             Rookie
@@ -128,6 +187,7 @@ function PlayerForm(){
                     name="contentWarnings"
                     id="contentWarnings"
                     placeholder="Please enter any material you would not like in your game"
+                    onChange={handleContentWarnings}
                         />
                 </Col>
                 <Col xs="1"/>
@@ -138,13 +198,13 @@ function PlayerForm(){
             <Row>
                 <Col xs="1"/>
                 <Col>
-                    <Button>
+                    <Button type="submit" color="dark" outline>
                         Submit
                     </Button>
                 </Col>
                 <Col xs="1"/>
             </Row>
-                <PageLines className="inside-white" />
+            <PageLines className="inside-white" />
             </FormGroup>
         </Form>
       </Container>
