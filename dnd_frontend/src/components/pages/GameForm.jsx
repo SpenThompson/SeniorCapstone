@@ -132,6 +132,9 @@ function GameForm(){
                     onChange={handlePronouns}
                     >
                         <option>
+                            Please Select
+                        </option>
+                        <option>
                             He/Him
                         </option>
                         <option>
@@ -173,6 +176,9 @@ function GameForm(){
                     id="experience"
                     onChange={handleExperience}
                     >
+                        <option>
+                            Please Select
+                        </option>
                         <option>
                             Rookie
                         </option>
@@ -217,6 +223,9 @@ function GameForm(){
                     id="contentAllowed"
                     onChange={handleContentAllowed}
                     >
+                        <option>
+                            Please Select
+                        </option>
                         <option>
                             All Allowed
                         </option>

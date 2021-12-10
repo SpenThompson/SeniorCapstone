@@ -118,6 +118,9 @@ function PlayerForm(){
                     onChange={handlePronouns}
                     >
                         <option>
+                            Please Select
+                        </option>
+                        <option>
                             He/Him
                         </option>
                         <option>
@@ -159,6 +162,9 @@ function PlayerForm(){
                     id="experience"
                     onChange={handleExperience}
                     >
+                        <option>
+                            Please Select
+                        </option>
                         <option>
                             Rookie
                         </option>

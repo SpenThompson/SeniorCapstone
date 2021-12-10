@@ -123,6 +123,9 @@ function HomebrewForm(){
                         onChange={handlePronouns}
                         >
                             <option>
+                                Please Select
+                            </option>
+                            <option>
                                 He/Him
                             </option>
                             <option>
@@ -171,6 +174,9 @@ function HomebrewForm(){
                         id="type"
                         onChange={handleType}
                         >
+                            <option>
+                                Please Select
+                            </option>
                             <option>
                                 Race/Subrace
                             </option>
